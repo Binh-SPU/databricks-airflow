@@ -13,4 +13,9 @@ with DAG(
         time.sleep(5)
         print("Hello world, from Airflow!")
 
-    hello_world()
+    @task
+    def goodbye_world():
+        time.sleep(5)
+        print("Bye")
+
+    hello_world() >> goodbye_world()

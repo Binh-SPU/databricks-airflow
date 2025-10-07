@@ -1,1 +1,38 @@
-tmp
+# Temporary files and logs
+tmp/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Airflow
+airflow.db
+airflow.cfg
+unittests.cfg
+airflow_login_*
+logs/
+standalone_admin_password.txt
+
+# Kubernetes
+*.kubeconfig
+
+# AWS
+.aws/

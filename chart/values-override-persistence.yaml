@@ -3,7 +3,7 @@ executor: "KubernetesExecutor"
 # Images
 images:
   airflow:
-    repository: my-dags
+    repository: my-dags # Local development - override with ECR for production
     tag: ~
     # Specifying digest takes precedence over tag.
     digest: ~

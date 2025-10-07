@@ -9,16 +9,10 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Check if required variables are set
-if [ -z "$ECR_REGISTRY" ]; then
-    echo -e "${RED}Error: ECR_REGISTRY environment variable is not set${NC}"
-    echo "Example: export ECR_REGISTRY=123456789012.dkr.ecr.us-west-1.amazonaws.com"
-    exit 1
-fi
-
-# Configuration
+# Configuration (can be overridden with environment variables)
 AWS_REGION=${AWS_REGION:-us-west-1}
-IMAGE_NAME=${IMAGE_NAME:-my-dags}
+ECR_REGISTRY=${ECR_REGISTRY:-549802553860.dkr.ecr.us-west-1.amazonaws.com}
+IMAGE_NAME=${IMAGE_NAME:-my-dags-repo}
 IMAGE_TAG=${IMAGE_TAG:-$(date +%Y%m%d%H%M%S)}
 DOCKERFILE=${DOCKERFILE:-cicd/Dockerfile}
 

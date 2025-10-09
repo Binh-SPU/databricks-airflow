@@ -12,7 +12,9 @@ The core idea is to use Airflow to orchestrate complex data workflows. Specifica
 
 The following diagram illustrates the high-level system architecture and the flow of data and control within the system.
 
-![Diagram showing system layout](./Mermaid Chart - Create complex, visual diagrams with text.-2025-10-09-185901.svg)
+<p align="center">
+  <img src="./mermaid-diagram.svg" height="1000" width="1000" alt="ELK Mermaid Diagram">
+</p>
 
 ### Architecture Description
 
@@ -49,6 +51,8 @@ The architecture consists of several key components working together:
 - **Silver Layer**: Data cleaning, transformation, and standardization
 - **Gold Layer**: Business logic, aggregations, and analytics
 - **Dashboard Generation**: Final insights and visualizations
+
+<img width="1100" height="201" alt="image" src="https://github.com/user-attachments/assets/c6bf96d1-7bb8-4c22-854b-d6b2b3fb2925" />
 
 **6. Data Storage & Governance**
 
@@ -323,18 +327,6 @@ docker exec kind-worker chown -R 50000:0 /mnt/airflow-data/logs
 - **[Operators](https://airflow.apache.org/docs/apache-airflow/stable/concepts/operators.html)**: Task execution units
 - **[GitSync](https://airflow.apache.org/docs/apache-airflow/stable/howto/sync-dags.html)**: DAG synchronization
 - **[Kubernetes Executor](https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html)**: Dynamic task execution
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
